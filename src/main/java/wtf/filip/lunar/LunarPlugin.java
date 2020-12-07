@@ -40,7 +40,7 @@ public class LunarPlugin implements EntryLoaderProviderPlugin, ResourceIntercept
      */
     @Override
     public String onLoad(String name, String ext) {
-        if (name.contains("lunar")) return "jar";
+        if (name.contains("lunar") || name.contains("prod") || name.equalsIgnoreCase("natives_win")) return "jar";
         else return ext;
     }
 }
