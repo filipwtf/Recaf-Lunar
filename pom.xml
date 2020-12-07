@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!-- Your personal package -->
-	<groupId>me.yourname</groupId>
-	<artifactId>plugin</artifactId>
+	<groupId>wtf.filip</groupId>
+	<artifactId>lunar</artifactId>
 	<version>1.0.0</version>
-	<name>Recaf plugin workspace</name>
+	<name>Recaf Lunar plugin</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -13,6 +14,14 @@
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>bintray</name>
+			<url>https://jcenter.bintray.com</url>
 		</repository>
 	</repositories>
 	<!-- Dependencies, most are inferred by Recaf's own dependency list -->
@@ -33,6 +42,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 </project>
