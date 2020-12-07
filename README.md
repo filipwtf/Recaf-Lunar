@@ -2,6 +2,7 @@
 
 Renames lunar client class files to .class so it can actually be read
 
-### TODO
+### TODO 
+Allow loading of jars without .jar (lunar-prod, lunar-lubs)
 
-Allow loading of jars without .jar (lunar-prod)
+*EDIT* You can you my custom forks here to run the plugin https://github.com/filipwtf/Recaf/releases/tag/2.5.1
