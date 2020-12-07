@@ -1,8 +1,7 @@
 package wtf.filip.lunar;
 
-import me.coley.recaf.control.Controller;
 import me.coley.recaf.plugin.api.EntryLoaderProviderPlugin;
-import me.coley.recaf.plugin.api.StartupPlugin;
+import me.coley.recaf.plugin.api.ResourceInterceptorPlugin;
 import me.coley.recaf.workspace.EntryLoader;
 import org.plugface.core.annotations.Plugin;
 
@@ -10,7 +9,7 @@ import org.plugface.core.annotations.Plugin;
  * @author Filip
  */
 @Plugin(name = "LunarPlugin")
-public class LunarPlugin implements EntryLoaderProviderPlugin, StartupPlugin {
+public class LunarPlugin implements EntryLoaderProviderPlugin, ResourceInterceptorPlugin {
 
     @Override
     public String getVersion() {
@@ -35,12 +34,13 @@ public class LunarPlugin implements EntryLoaderProviderPlugin, StartupPlugin {
 
 
     /**
-     * Called before the controller is started, but after the controller is configured.
-     *
-     * @param controller The controller context Recaf was started with.
+     * @param name resource name
+     * @param ext  resource extension
+     * @return the actual extension of the resource
      */
     @Override
-    public void onStart(Controller controller) {
-        // TODO Figure out LoadWorkspace
+    public String onLoad(String name, String ext) {
+        if (name.contains("lunar")) return "jar";
+        else return ext;
     }
 }
